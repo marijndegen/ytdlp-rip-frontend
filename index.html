@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #020617;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 30px rgba(0,0,0,.4);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    input {
+      background: #020617;
+      color: white;
+      border: 1px solid #334155;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Submit YouTube Link</h2>
+
+    <input
+      id="youtubeUrl"
+      type="text"
+      placeholder="https://www.youtube.com/watch?v=..."
+    />
+
+    <button id="submitBtn">Send</button>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
